@@ -44,7 +44,7 @@ const Header = () => {
                 bg="#ffffff"
                 textColor="black"
                 to="/signup"
-                text="Signup"
+                text="Sign up"
               />
             </>
           )}

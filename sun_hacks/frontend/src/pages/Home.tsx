@@ -15,7 +15,7 @@ const Home = () => {
         width={"100%"}
         height={"100%"}
         sx={{
-          background: "linear-gradient(to bottom, #c184b8, #e6c08e)", 
+      
           minHeight: "100vh",
           display: "flex",
           flexDirection: "column",
@@ -49,7 +49,11 @@ const Home = () => {
               lineHeight: 1.4,
             }}
           >
-            SparkConnect offers a safe space for university students to connect, access mental health resources, and engage in supportive chats with peers or our AI "Spark Bot." Your well-being matters.
+          <p className="text-center text-base md:text-lg lg:text-xl max-w-lg mx-auto leading-normal">
+           SparkConnect provides a safe space for university students to connect, find mental health resources, and chat with peers or our AI "Spark Bot." Your well-being matters.
+        </p>
+
+
           </Typography>
 
           {/* Try Now Button */}
@@ -58,8 +62,8 @@ const Home = () => {
               variant="contained"
               onClick={() => window.location.href = '/login'}
               sx={{
-                backgroundColor: "#f0a000",
-                color: "white",
+                backgroundColor: "#ffffff",
+                color: "black",
                 fontWeight: "bold",
                 padding: "12px 24px",
                 fontSize: "18px",
@@ -67,7 +71,7 @@ const Home = () => {
                 boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.2)",
                 transition: "all 0.3s ease",
                 ":hover": {
-                  backgroundColor: "#d48806",
+                  backgroundColor: "#eab308",
                   transform: "translateY(-2px)", 
                   boxShadow: "0px 6px 20px rgba(0, 0, 0, 0.3)",
                 },
@@ -79,20 +83,21 @@ const Home = () => {
 
           {/* Image or Illustration Section */}
           <Box sx={{ display: "flex", mx: "auto", padding: "20px" }}>
-            <img
-              src="chat.png"
-              alt="chatbot"
-              style={{
-                display: "flex",
-                margin: "auto",
-                width: isBelowMd ? "80%" : "60%",
-                borderRadius: 20,
-                boxShadow: "-5px -5px 105px #ffffff",
-                marginTop: 20,
-                marginBottom: 20,
-                padding: 10,
-              }}
-            />
+                    <img
+            src="chat.png"
+            alt="chatbot"
+            style={{
+              display: "flex",
+              margin: "auto",
+              width: isBelowMd ? "80%" : "60%",
+              borderRadius: 20,
+              boxShadow: "-5px -5px 105px #ffffff",
+              marginTop: 20,
+              marginBottom: 20,
+              padding: 10,
+              border: "1px solid black", // Added black border
+            }}
+          />
           </Box>
         </Box>
         <Footer />

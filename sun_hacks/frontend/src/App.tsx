@@ -12,7 +12,7 @@ function App() {
   return (
     <Box
       sx={{
-        background: "linear-gradient(to bottom, #c184b8, #e6c08e)", // Apply the same gradient
+        background: "linear-gradient(to bottom, #e57373, #e6c08e)", // Apply the same gradient
         minHeight: "100vh", // Ensure it covers the full height
         display: "flex",
         flexDirection: "column",

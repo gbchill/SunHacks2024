@@ -15,7 +15,7 @@ const Signup = () => {
       setTimeout(() => {
         toast.dismiss("redirect");
         navigate("/bot"); // Directly navigate to the bot page when button is clicked
-      }, 1000); 
+      }, 1000);
     } catch (error) {
       console.log(error);
       toast.error("Unable to enter bot", { id: "redirect" });
@@ -32,7 +32,7 @@ const Signup = () => {
         flex={1}
         padding={4}
         sx={{
-          backgroundColor: "white", 
+          backgroundColor: "white",
         }}
       >
         <form
@@ -58,7 +58,7 @@ const Signup = () => {
               textAlign="center"
               padding={2}
               fontWeight={600}
-              color="black" 
+              color="black"
             >
               You Are Not Alone!
             </Typography>
@@ -70,7 +70,7 @@ const Signup = () => {
             >
               Sign in with your ASU account
             </Typography>
-            
+
             {/* Input fields with updated styles */}
             <TextField
               variant="outlined"
@@ -78,33 +78,33 @@ const Signup = () => {
               label="Email Address"
               fullWidth
               InputLabelProps={{
-                style: { color: "black" }, 
+                style: { color: "black" },
               }}
               sx={{
                 marginBottom: 2,
                 backgroundColor: "#f7f7f7",
                 borderRadius: 1,
-                input: { 
-                  color: "black", 
-                  '&::placeholder': {
-                    color: "black", 
-                    opacity: 1, 
+                input: {
+                  color: "black",
+                  "&::placeholder": {
+                    color: "black",
+                    opacity: 1,
                   },
                 },
-                '& .MuiOutlinedInput-root': {
-                  '& fieldset': {
-                    borderColor: '#d3d3d3', 
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    borderColor: "#d3d3d3",
                   },
-                  '&:hover fieldset': {
-                    borderColor: '#aaa', 
+                  "&:hover fieldset": {
+                    borderColor: "#aaa",
                   },
-                  '&.Mui-focused fieldset': {
-                    borderColor: '#f0a000',
+                  "&.Mui-focused fieldset": {
+                    borderColor: "#f0a000",
                   },
                 },
               }}
             />
-            
+
             <TextField
               variant="outlined"
               name="password"
@@ -112,68 +112,99 @@ const Signup = () => {
               type="password"
               fullWidth
               InputLabelProps={{
-                style: { color: "black" }, 
+                style: { color: "black" },
               }}
               sx={{
                 marginBottom: 2,
                 backgroundColor: "#f7f7f7",
                 borderRadius: 1,
-                input: { 
-                  color: "black", 
-                  '&::placeholder': {
-                    color: "black", 
-                    opacity: 1, 
+                input: {
+                  color: "black",
+                  "&::placeholder": {
+                    color: "black",
+                    opacity: 1,
                   },
                 },
-                '& .MuiOutlinedInput-root': {
-                  '& fieldset': {
-                    borderColor: '#d3d3d3',
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    borderColor: "#d3d3d3",
                   },
-                  '&:hover fieldset': {
-                    borderColor: '#aaa',
+                  "&:hover fieldset": {
+                    borderColor: "#aaa",
                   },
-                  '&.Mui-focused fieldset': {
-                    borderColor: '#f0a000',
+                  "&.Mui-focused fieldset": {
+                    borderColor: "#f0a000",
                   },
                 },
               }}
             />
-            
-            <Button
-              type="submit"
-              sx={{
-                px: 2,
-                py: 1,
-                mt: 2,
-                width: "100%", 
-                borderRadius: 2,
-                bgcolor: "#f0a000", 
-                color: "white",
-                ":hover": {
-                  bgcolor: "#d48806",
-                },
-              }}
-              endIcon={<IoIosLogIn />}
-            >
-              LOGIN
-            </Button>
+
+            {/* Updated LOGIN Button */}
+            <Box sx={{ mt: 2, display: "flex", justifyContent: "center" }}>
+              <Button
+                type="submit"
+                variant="contained"
+                sx={{
+                  backgroundColor: "#ffffff",
+                  color: "black",
+                  fontWeight: "bold",
+                  padding: "12px 24px",
+                  fontSize: "18px",
+                  borderRadius: "25px",
+                  boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.2)",
+                  transition: "all 0.3s ease",
+                  ":hover": {
+                    backgroundColor: "#eab308",
+                    transform: "translateY(-2px)",
+                    boxShadow: "0px 6px 20px rgba(0, 0, 0, 0.3)",
+                  },
+                }}
+                endIcon={<IoIosLogIn />}
+              >
+                LOGIN
+              </Button>
+            </Box>
+
+            {/* New 'Go Back' Button */}
+            <Box sx={{ mt: 2, display: "flex", justifyContent: "center" }}>
+              <Button
+                variant="contained"
+                onClick={() => navigate(-1)} // Navigates back to the previous page
+                sx={{
+                  backgroundColor: "#ffffff",
+                  color: "black",
+                  fontWeight: "bold",
+                  padding: "12px 24px",
+                  fontSize: "18px",
+                  borderRadius: "25px",
+                  boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.2)",
+                  transition: "all 0.3s ease",
+                  ":hover": {
+                    backgroundColor: "#eab308",
+                    transform: "translateY(-2px)",
+                    boxShadow: "0px 6px 20px rgba(0, 0, 0, 0.3)",
+                  },
+                }}
+              >
+                Go Back
+              </Button>
+            </Box>
           </Box>
         </form>
       </Box>
 
       {/* Right Side - Image */}
-     
-        <img
-          src="sparkycartoon.png" 
-          alt="ASU Mascot"
-          style={{
-            maxHeight: "130%", 
-            width: "auto",
-            height: "auto", 
-            objectFit: "contain", 
-          }}
-        />
-      </Box>
+      <img
+        src="sparkycartoon.png"
+        alt="ASU Mascot"
+        style={{
+          maxHeight: "130%",
+          width: "auto",
+          height: "auto",
+          objectFit: "contain",
+        }}
+      />
+    </Box>
   );
 };
 
